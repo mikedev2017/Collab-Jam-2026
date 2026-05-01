@@ -1,0 +1,444 @@
+[gd_scene format=3 uid="uid://sewcrur7v0xu"]
+
+[ext_resource type="Script" uid="uid://caod3rufc6opr" path="res://scripts/menu/video_menu.gd" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://bofiyb2jkd5iq" path="res://scripts/menu/main_menu.gd" id="1_fu7sn"]
+[ext_resource type="Script" uid="uid://ul8lpq1rlsf7" path="res://scripts/menu/audio_menu.gd" id="2_7vrkn"]
+[ext_resource type="Script" uid="uid://bn1fcdrcluqae" path="res://scripts/menu/quit.gd" id="2_jix8l"]
+
+[node name="Main_Menu" type="Control" unique_id=2007233280]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fu7sn")
+
+[node name="Start_Menu" type="VBoxContainer" parent="." unique_id=842483387]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -56.5
+offset_right = 100.0
+offset_bottom = 55.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Start_Menu" unique_id=428044271]
+layout_mode = 2
+text = "Title of Game"
+horizontal_alignment = 1
+
+[node name="Start" type="Button" parent="Start_Menu" unique_id=1877380875]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Start"
+
+[node name="Settings" type="Button" parent="Start_Menu" unique_id=1932835938]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 16
+text = "Settings"
+
+[node name="Quit" type="Button" parent="Start_Menu" unique_id=1283706571]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit"
+script = ExtResource("2_jix8l")
+
+[node name="Settings_Menu" type="VBoxContainer" parent="." unique_id=1525890736]
+visible = false
+custom_minimum_size = Vector2(100, 152)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -76.0
+offset_right = 100.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Video" type="Button" parent="Settings_Menu" unique_id=1333703036]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Video"
+
+[node name="Audio" type="Button" parent="Settings_Menu" unique_id=308958596]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Audio"
+
+[node name="Controls" type="Button" parent="Settings_Menu" unique_id=1141088261]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Controls"
+
+[node name="Language" type="Button" parent="Settings_Menu" unique_id=1608744662]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Language"
+
+[node name="Video_Menu" type="VBoxContainer" parent="." unique_id=1752500658]
+visible = false
+custom_minimum_size = Vector2(165, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -75.0
+offset_right = 160.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+script = ExtResource("1_06t4h")
+
+[node name="Label" type="Label" parent="Video_Menu" unique_id=1056550126]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "Video"
+
+[node name="Resolution_Hbox" type="HBoxContainer" parent="Video_Menu" unique_id=1822069286]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="Video_Menu/Resolution_Hbox" unique_id=847458142]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Resolution"
+
+[node name="Resolution_Options" type="OptionButton" parent="Video_Menu/Resolution_Hbox" unique_id=791617748]
+layout_mode = 2
+alignment = 1
+selected = 0
+item_count = 4
+popup/item_0/text = "1920 x 1080"
+popup/item_0/id = 0
+popup/item_1/text = "1600 x 900"
+popup/item_1/id = 1
+popup/item_2/text = "1280 x 720"
+popup/item_2/id = 2
+popup/item_3/text = "640 x 360"
+popup/item_3/id = 3
+
+[node name="Fullscreen_Hbox" type="HBoxContainer" parent="Video_Menu" unique_id=213937131]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="Video_Menu/Fullscreen_Hbox" unique_id=635427520]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fullscreen"
+
+[node name="Wrapper" type="Control" parent="Video_Menu/Fullscreen_Hbox" unique_id=1978943633]
+custom_minimum_size = Vector2(114, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="FullscreenToggle" type="CheckButton" parent="Video_Menu/Fullscreen_Hbox/Wrapper" unique_id=498716140]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -12.0
+offset_right = 22.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Borderless_Hbox" type="HBoxContainer" parent="Video_Menu" unique_id=98253716]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="Video_Menu/Borderless_Hbox" unique_id=1670089467]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Borderless"
+
+[node name="Wrapper" type="Control" parent="Video_Menu/Borderless_Hbox" unique_id=883111114]
+custom_minimum_size = Vector2(114, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="BorderlessToggle" type="CheckButton" parent="Video_Menu/Borderless_Hbox/Wrapper" unique_id=563433138]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -12.0
+offset_right = 22.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="VSync_Hbox" type="HBoxContainer" parent="Video_Menu" unique_id=1907609983]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="Video_Menu/VSync_Hbox" unique_id=761687620]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "VSync"
+
+[node name="Wrapper" type="Control" parent="Video_Menu/VSync_Hbox" unique_id=1928856303]
+custom_minimum_size = Vector2(114, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="VSyncCheckBox" type="CheckBox" parent="Video_Menu/VSync_Hbox/Wrapper" unique_id=1038052096]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Audio_Menu" type="VBoxContainer" parent="." unique_id=1710434650]
+visible = false
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -75.0
+offset_right = 100.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_7vrkn")
+
+[node name="Label" type="Label" parent="Audio_Menu" unique_id=1556537705]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "Audio"
+
+[node name="Master_HBox" type="HBoxContainer" parent="Audio_Menu" unique_id=552696427]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Label" type="Label" parent="Audio_Menu/Master_HBox" unique_id=12675172]
+layout_mode = 2
+text = "Master"
+
+[node name="MasterHSlider" type="HSlider" parent="Audio_Menu/Master_HBox" unique_id=1357642170]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+value = 1.0
+
+[node name="Music_HBox" type="HBoxContainer" parent="Audio_Menu" unique_id=1624975664]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Label" type="Label" parent="Audio_Menu/Music_HBox" unique_id=1778186877]
+layout_mode = 2
+text = "Music"
+
+[node name="MusicHSlider" type="HSlider" parent="Audio_Menu/Music_HBox" unique_id=1140336551]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+value = 1.0
+
+[node name="SFX_HBox" type="HBoxContainer" parent="Audio_Menu" unique_id=717780367]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Label" type="Label" parent="Audio_Menu/SFX_HBox" unique_id=386845957]
+layout_mode = 2
+text = "SFX"
+
+[node name="SFXHSlider" type="HSlider" parent="Audio_Menu/SFX_HBox" unique_id=1041734027]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+value = 1.0
+
+[node name="Controls_Menu" type="VBoxContainer" parent="." unique_id=1018389163]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -84.0
+offset_right = 80.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Controls_Menu" unique_id=1048091984]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "Controls (Work in progress)"
+
+[node name="UpControl_Hbox" type="HBoxContainer" parent="Controls_Menu" unique_id=557730377]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Controls_Menu/UpControl_Hbox" unique_id=902375653]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Up"
+
+[node name="Button" type="Button" parent="Controls_Menu/UpControl_Hbox" unique_id=886234281]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Up"
+
+[node name="DownControl_Hbox" type="HBoxContainer" parent="Controls_Menu" unique_id=717680120]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Controls_Menu/DownControl_Hbox" unique_id=1987176390]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Down"
+
+[node name="Button" type="Button" parent="Controls_Menu/DownControl_Hbox" unique_id=1315329846]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Down"
+
+[node name="LeftControl_Hbox" type="HBoxContainer" parent="Controls_Menu" unique_id=1585366736]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Controls_Menu/LeftControl_Hbox" unique_id=1512714612]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Left"
+
+[node name="Button" type="Button" parent="Controls_Menu/LeftControl_Hbox" unique_id=182868353]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Left"
+
+[node name="RightControl_Hbox" type="HBoxContainer" parent="Controls_Menu" unique_id=383911634]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Controls_Menu/RightControl_Hbox" unique_id=989573757]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Right"
+
+[node name="Button" type="Button" parent="Controls_Menu/RightControl_Hbox" unique_id=1989520762]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Right"
+
+[node name="Language_Menu" type="VBoxContainer" parent="." unique_id=1923027696]
+visible = false
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Language_Menu" unique_id=627081835]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "Language"
+
+[node name="OptionButton" type="OptionButton" parent="Language_Menu" unique_id=1805103334]
+layout_mode = 2
+selected = 0
+item_count = 1
+popup/item_0/text = "English"
+popup/item_0/id = 0
+
+[node name="Label2" type="Label" parent="Language_Menu" unique_id=622079309]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 12
+text = "*Only code this 
+if adding new languages"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=506861617]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="BackButton" type="Button" parent="MarginContainer" unique_id=545294571]
+visible = false
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Back"
+
+[connection signal="pressed" from="Start_Menu/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Start_Menu/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Start_Menu/Quit" to="Start_Menu/Quit" method="_on_pressed"]
+[connection signal="pressed" from="Settings_Menu/Video" to="." method="_on_video_pressed"]
+[connection signal="pressed" from="Settings_Menu/Audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="Settings_Menu/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="Settings_Menu/Language" to="." method="_on_language_pressed"]
+[connection signal="item_selected" from="Video_Menu/Resolution_Hbox/Resolution_Options" to="Video_Menu" method="_on_resolution_options_item_selected"]
+[connection signal="toggled" from="Video_Menu/Fullscreen_Hbox/Wrapper/FullscreenToggle" to="Video_Menu" method="_on_fullscreen_toggle_toggled"]
+[connection signal="toggled" from="Video_Menu/Borderless_Hbox/Wrapper/BorderlessToggle" to="Video_Menu" method="_on_borderless_toggle_toggled"]
+[connection signal="toggled" from="Video_Menu/VSync_Hbox/Wrapper/VSyncCheckBox" to="Video_Menu" method="_on_v_sync_check_box_toggled"]
+[connection signal="value_changed" from="Audio_Menu/Master_HBox/MasterHSlider" to="Audio_Menu" method="_on_master_h_slider_value_changed"]
+[connection signal="value_changed" from="Audio_Menu/Music_HBox/MusicHSlider" to="Audio_Menu" method="_on_music_h_slider_value_changed"]
+[connection signal="value_changed" from="Audio_Menu/SFX_HBox/SFXHSlider" to="Audio_Menu" method="_on_sfxh_slider_value_changed"]
+[connection signal="pressed" from="MarginContainer/BackButton" to="." method="_on_back_button_pressed"]

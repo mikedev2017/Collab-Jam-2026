@@ -29,7 +29,7 @@ func load_scene(_scene_path: String) -> void:
 	load_finished.connect(new_load_screen._on_load_finished)
 	# Wait for the Loading Screen to emit it's loading_screen_ready signal
 	await new_load_screen.loading_screen_ready
-	
+
 	start_load()
 
 

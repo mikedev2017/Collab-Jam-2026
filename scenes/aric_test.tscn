@@ -150,3 +150,5 @@ text = "Camera Speed: y"
 unique_name_in_owner = true
 layout_mode = 2
 text = "Chez Kill: No"
+
+[editable path="Camera2D/Area2D_KillZone"]

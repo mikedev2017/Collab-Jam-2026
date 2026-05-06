@@ -8,4 +8,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if chez_killed == true:
+		SceneLoader.load_scene("res://scenes/game_over.tscn")
+		chez_killed = false

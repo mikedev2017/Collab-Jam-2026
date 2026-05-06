@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://03k3ac6n124n"]
+
+[ext_resource type="Texture2D" uid="uid://bwrspmcviwvg4" path="res://sprites/chef-arm-placeholder-sprite.png" id="1_7pjaj"]
+
+[node name="Node2D" type="Node2D" unique_id=1850035438]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1610488373]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1856575625]
+visible = false
+texture_filter = 1
+position = Vector2(-5, -5)
+texture = ExtResource("1_7pjaj")
+offset = Vector2(24, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2062750417]
+texture_filter = 1
+texture = ExtResource("1_7pjaj")
+offset = Vector2(24, 0)

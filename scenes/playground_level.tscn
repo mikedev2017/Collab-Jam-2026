@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://drv8vmwbnbbkv"]
+
+[ext_resource type="PackedScene" uid="uid://ckm8uuci2qhy8" path="res://scenes/player.tscn" id="1_6qc1i"]
+[ext_resource type="Script" uid="uid://eh5ucb7dvjat" path="res://scripts/camera_2d.gd" id="1_hdqxe"]
+[ext_resource type="Texture2D" uid="uid://fuoh0o2v8fp0" path="res://sprites/player-sprite-placeholder.png" id="2_s2giu"]
+[ext_resource type="PackedScene" uid="uid://03k3ac6n124n" path="res://scenes/chef_arms.tscn" id="3_lux8u"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_svlue"]
+
+[node name="playground_level" type="Node" unique_id=1536280341]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=693808367]
+position = Vector2(0, -26)
+zoom = Vector2(2.17, 2.17)
+process_callback = 0
+script = ExtResource("1_hdqxe")
+
+[node name="chef_arm" parent="Camera2D" unique_id=1850035438 instance=ExtResource("3_lux8u")]
+texture_filter = 1
+position = Vector2(-92, 8)
+
+[node name="player" parent="." unique_id=1388026622 instance=ExtResource("1_6qc1i")]
+position = Vector2(-26, -18)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1221299204]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1108500072]
+shape = SubResource("WorldBoundaryShape2D_svlue")
+
+[node name="PlayerSpritePlaceholder" type="Sprite2D" parent="." unique_id=305487998]
+position = Vector2(-129, -23)
+texture = ExtResource("2_s2giu")
+
+[node name="PlayerSpritePlaceholder2" type="Sprite2D" parent="." unique_id=92532244]
+position = Vector2(190, -25)
+texture = ExtResource("2_s2giu")

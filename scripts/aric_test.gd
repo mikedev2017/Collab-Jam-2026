@@ -1,0 +1,29 @@
+extends Node2D
+
+@onready var camera_2d: Camera2D = $Camera2D
+@onready var label_camera_speed: Label = %LabelCameraSpeed
+@onready var label_camera_position: Label = %LabelCameraPosition
+
+@export var scrollspeed : float = 1.0
+
+
+var acceleration_marker : float = 200.00
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	print(scrollspeed)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	camera_2d.position.x = camera_2d.position.x + scrollspeed * delta
+	label_camera_speed.text = str("Camera speed: " + str(scrollspeed))
+	label_camera_position.text = str("Camera position: " + str(roundf(camera_2d.position.x)))
+	# Everytime the camera passes it's acceration marker, then increase camera speed to pressure the Player
+	if camera_2d.position.x > acceleration_marker:
+		print("Accelerated")
+		acceleration_marker += 200
+		accelerate_camera()
+
+
+func accelerate_camera():
+	scrollspeed += 20

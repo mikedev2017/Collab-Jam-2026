@@ -116,14 +116,13 @@ theme_override_constants/margin_bottom = 8
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayerHUD/Panel/MarginContainer" unique_id=1473640976]
 layout_mode = 2
 
-[node name="LabelCameraPosition" type="Label" parent="CanvasLayerHUD/Panel/MarginContainer/VBoxContainer" unique_id=1673875203]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Camera position: x"
-
 [node name="LabelCameraSpeed" type="Label" parent="CanvasLayerHUD/Panel/MarginContainer/VBoxContainer" unique_id=963171660]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 16
-text = "Camera Speed: y"
+text = "Camera Speed: 0"
+
+[node name="LabelCameraPosition" type="Label" parent="CanvasLayerHUD/Panel/MarginContainer/VBoxContainer" unique_id=1673875203]
+unique_name_in_owner = true
+layout_mode = 2

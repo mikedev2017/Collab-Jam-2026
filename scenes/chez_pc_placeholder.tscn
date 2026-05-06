@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cl7f7uahrl8yc" path="res://scripts/player_scripts/state_machine.gd" id="3_2axt3"]
 [ext_resource type="Script" uid="uid://meh20fpseg8j" path="res://scripts/player_scripts/idle_state.gd" id="4_7i0th"]
 [ext_resource type="Script" uid="uid://c3nel2orxoy7j" path="res://scripts/player_scripts/running_state.gd" id="5_iywv6"]
-[ext_resource type="Script" uid="uid://dlspvsa677pg" path="res://scenes/jumping_state.gd" id="6_2axt3"]
+[ext_resource type="Script" uid="uid://dlspvsa677pg" path="res://scripts/player_scripts/jumping_state.gd" id="6_2axt3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pfukx"]
 size = Vector2(16, 16)

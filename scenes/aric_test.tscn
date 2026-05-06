@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://wk5tyfoucput"]
+
+[ext_resource type="Texture2D" uid="uid://64ybock02e0g" path="res://assets/icon.svg" id="1_cbee3"]
+[ext_resource type="PackedScene" uid="uid://d4ec3vnmhnjud" path="res://scenes/chez_pc_placeholder.tscn" id="2_iqyrr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqyrr"]
+size = Vector2(320, 32)
+
+[node name="Aric_Test" type="Node2D" unique_id=840410727]
+
+[node name="StaticBody2D_Floor" type="StaticBody2D" parent="." unique_id=1242948465]
+position = Vector2(160, 164)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D_Floor" unique_id=516734031]
+shape = SubResource("RectangleShape2D_iqyrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D_Floor" unique_id=424492290]
+modulate = Color(0.7636295, 0.40097457, 0.17837647, 1)
+position = Vector2(-3.8146973e-06, -5.722046e-06)
+scale = Vector2(2.5, 0.24999991)
+texture = ExtResource("1_cbee3")
+
+[node name="Chez_PC_Placeholder" parent="StaticBody2D_Floor" unique_id=285485107 instance=ExtResource("2_iqyrr")]
+position = Vector2(-74, -17)

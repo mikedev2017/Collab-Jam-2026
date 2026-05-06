@@ -10,8 +10,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pfukx"]
 size = Vector2(16, 16)
 
-[node name="Chez_PC_Placeholder" type="CharacterBody2D" unique_id=285485107]
-collision_mask = 0
+[node name="Chez_PC_Placeholder" type="CharacterBody2D" unique_id=285485107 groups=["player"]]
+collision_mask = 2
 script = ExtResource("1_71s15")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=265371055]

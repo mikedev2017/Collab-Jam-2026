@@ -1,15 +1,22 @@
 [gd_scene format=3 uid="uid://wk5tyfoucput"]
 
 [ext_resource type="Texture2D" uid="uid://64ybock02e0g" path="res://assets/icon.svg" id="1_cbee3"]
+[ext_resource type="Script" uid="uid://vqjua10bvq4x" path="res://scenes/aric_test.gd" id="1_dnfd7"]
 [ext_resource type="PackedScene" uid="uid://d4ec3vnmhnjud" path="res://scenes/chez_pc_placeholder.tscn" id="2_iqyrr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqyrr"]
 size = Vector2(320, 32)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i380p"]
+size = Vector2(48, 180)
+
 [node name="Aric_Test" type="Node2D" unique_id=840410727]
+script = ExtResource("1_dnfd7")
+scrollspeed = 20.0
 
 [node name="StaticBody2D_Floor" type="StaticBody2D" parent="." unique_id=1242948465]
 position = Vector2(160, 164)
+scale = Vector2(0.9999974, 1)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D_Floor" unique_id=516734031]
@@ -21,5 +28,79 @@ position = Vector2(-3.8146973e-06, -5.722046e-06)
 scale = Vector2(2.5, 0.24999991)
 texture = ExtResource("1_cbee3")
 
-[node name="Chez_PC_Placeholder" parent="StaticBody2D_Floor" unique_id=285485107 instance=ExtResource("2_iqyrr")]
-position = Vector2(-74, -17)
+[node name="StaticBody2D_Floor2" type="StaticBody2D" parent="." unique_id=161682811]
+position = Vector2(480, 164)
+scale = Vector2(0.9999974, 1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D_Floor2" unique_id=1250575518]
+shape = SubResource("RectangleShape2D_iqyrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D_Floor2" unique_id=1562176116]
+modulate = Color(0.7636295, 0.40097457, 0.17837647, 1)
+position = Vector2(-3.8146973e-06, -5.722046e-06)
+scale = Vector2(2.5, 0.24999991)
+texture = ExtResource("1_cbee3")
+
+[node name="StaticBody2D_Floor3" type="StaticBody2D" parent="." unique_id=1636092263]
+position = Vector2(800, 164)
+scale = Vector2(0.9999974, 1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D_Floor3" unique_id=713738253]
+shape = SubResource("RectangleShape2D_iqyrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D_Floor3" unique_id=814960095]
+modulate = Color(0.7636295, 0.40097457, 0.17837647, 1)
+position = Vector2(-3.8146973e-06, -5.722046e-06)
+scale = Vector2(2.5, 0.24999991)
+texture = ExtResource("1_cbee3")
+
+[node name="StaticBody2D_Floor4" type="StaticBody2D" parent="." unique_id=1910710837]
+position = Vector2(1120, 164)
+scale = Vector2(0.9999974, 1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D_Floor4" unique_id=964343240]
+shape = SubResource("RectangleShape2D_iqyrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D_Floor4" unique_id=1071431433]
+modulate = Color(0.7636295, 0.40097457, 0.17837647, 1)
+position = Vector2(-3.8146973e-06, -5.722046e-06)
+scale = Vector2(2.5, 0.24999991)
+texture = ExtResource("1_cbee3")
+
+[node name="StaticBody2D_Floor5" type="StaticBody2D" parent="." unique_id=1116917889]
+position = Vector2(1440, 164)
+scale = Vector2(0.9999974, 1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D_Floor5" unique_id=1793161089]
+shape = SubResource("RectangleShape2D_iqyrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D_Floor5" unique_id=2143826639]
+modulate = Color(0.7636295, 0.40097457, 0.17837647, 1)
+position = Vector2(-3.8146973e-06, -5.722046e-06)
+scale = Vector2(2.5, 0.24999991)
+texture = ExtResource("1_cbee3")
+
+[node name="Chez_PC_Placeholder" parent="." unique_id=285485107 instance=ExtResource("2_iqyrr")]
+position = Vector2(86, 147)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1463887994]
+anchor_mode = 0
+
+[node name="Area2D_DeathZone" type="Area2D" parent="Camera2D" unique_id=1279178360]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D_DeathZone" unique_id=808215821]
+position = Vector2(24, 90)
+shape = SubResource("RectangleShape2D_i380p")
+debug_color = Color(0.98763055, 0, 0.31595823, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Area2D_DeathZone" unique_id=1092439559]
+modulate = Color(1, 0.4531421, 0.45289332, 1)
+position = Vector2(24, 74)
+scale = Vector2(0.375, 1.15625)
+texture = ExtResource("1_cbee3")
+
+[connection signal="body_entered" from="Camera2D/Area2D_DeathZone" to="." method="_on_area_2d_death_zone_body_entered"]

@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://b0n2gciihed80"]
+
+[ext_resource type="Script" uid="uid://cnaedggd1l7ho" path="res://scripts/game_over.gd" id="1_wqhvx"]
+[ext_resource type="Texture2D" uid="uid://64ybock02e0g" path="res://assets/icon.svg" id="2_tbwuq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yxx3c"]
+texture = ExtResource("2_tbwuq")
+modulate_color = Color(0.26657522, 0.2665752, 0.2665752, 1)
+
+[node name="GameOver" type="Control" unique_id=1254711190]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wqhvx")
+
+[node name="PanelGameOverBackground" type="Panel" parent="." unique_id=1769547915]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxx3c")
+
+[node name="Label" type="Label" parent="PanelGameOverBackground" unique_id=1822855371]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
+offset_top = 199.0
+offset_right = 130.0
+offset_bottom = 266.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "Game Over"
+
+[node name="ButtonRestartGame" type="Button" parent="PanelGameOverBackground" unique_id=556208385]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -37.5
+offset_right = 88.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "Restart"
+
+[connection signal="pressed" from="PanelGameOverBackground/ButtonRestartGame" to="." method="_on_button_restart_game_pressed"]

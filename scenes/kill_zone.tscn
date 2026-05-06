@@ -17,6 +17,7 @@ shape = SubResource("RectangleShape2D_i380p")
 debug_color = Color(0.98763055, 0, 0.31595823, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1029703414]
+visible = false
 modulate = Color(1, 0.4531421, 0.45289332, 1)
 position = Vector2(24, 74)
 scale = Vector2(0.375, 1.15625)

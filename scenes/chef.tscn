@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bxio0q3n822mb"]
+
+[ext_resource type="Texture2D" uid="uid://b3ry4pg2i74ji" path="res://sprites/chef-placeholder-sprite.png" id="1_1slas"]
+
+[node name="Chef" type="Node2D" unique_id=1079395461]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=710886673]
+texture = ExtResource("1_1slas")
+centered = false
+offset = Vector2(0, -24)

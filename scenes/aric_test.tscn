@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://vqjua10bvq4x" path="res://scripts/aric_test.gd" id="1_dnfd7"]
 [ext_resource type="PackedScene" uid="uid://d4ec3vnmhnjud" path="res://scenes/chez_pc_placeholder.tscn" id="2_iqyrr"]
 [ext_resource type="PackedScene" uid="uid://borhi0o2v58a3" path="res://scenes/kill_zone.tscn" id="4_i380p"]
+[ext_resource type="PackedScene" uid="uid://bxio0q3n822mb" path="res://scenes/chef.tscn" id="5_0m5h0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqyrr"]
 size = Vector2(320, 32)
@@ -107,6 +108,9 @@ anchor_mode = 0
 zoom = Vector2(4, 4)
 
 [node name="Area2D_KillZone" parent="Camera2D" unique_id=212058626 instance=ExtResource("4_i380p")]
+
+[node name="Chef" parent="Camera2D" unique_id=1079395461 instance=ExtResource("5_0m5h0")]
+position = Vector2(-40, 123)
 
 [node name="CanvasLayerHUD" type="CanvasLayer" parent="." unique_id=970745591]
 

@@ -1,0 +1,62 @@
+[gd_resource type="TileSet" format=3 uid="uid://hju7pfludsmp"]
+
+[ext_resource type="Texture2D" uid="uid://c8cexs2m2dk0r" path="res://sprites/test-sprites-2.png" id="1_4rlx2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d2txl"]
+texture = ExtResource("1_4rlx2")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.613735, 8, -4.4396324, 8, 8, -8, 8)
+0:0/0/physics_layer_0/polygon_0/one_way = true
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.613735, 8, -4.613735, 8, 8, -8, 8)
+1:0/0/physics_layer_0/polygon_0/one_way = true
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+0:9/0 = 0
+0:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.613735, 8, -4.613735, 8, 8, -8, 8)
+1:9/0 = 0
+1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.613735, 8, -4.613735, 8, 8, -8, 8)
+2:9/0 = 0
+2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.613735, 8, -4.613735, 8, 8, -8, 8)
+0:10/0 = 0
+2:10/0 = 0
+0:11/0 = 0
+2:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+1:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+
+[resource]
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_d2txl")

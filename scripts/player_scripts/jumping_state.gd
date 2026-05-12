@@ -1,19 +1,16 @@
 extends State
 
+@onready var animation_player: AnimationPlayer = $"../../AnimationPlayer"
+@export var chez: CharacterBody2D
+
+@export var air_movement_speed = 200.0
 
 func enter() -> void:
 	# Start jumping animation
-	pass
-
-
-func exit() -> void:
-	pass
+	animation_player.play("jump")
 
 
 func update(_delta: float) -> void:
-	pass
-
-
-func physics_update(_delta: float) -> void:
-	# If Player.is_on_floor, then transition to IdleState
-	pass
+		# Handle transition to FallingState
+	if chez.velocity.y > 0:
+		transition.emit("FallingState")

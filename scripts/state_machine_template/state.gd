@@ -2,7 +2,6 @@ class_name State extends Node
 
 # This is a template for States used in a State Machine
 
-@warning_ignore("unused_signal")
 signal transition(new_state_name : String)
 
 

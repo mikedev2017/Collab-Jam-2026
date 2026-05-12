@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cen2qs3nfrtav" path="res://scripts/player_scripts/chez.gd" id="1_71s15"]
 [ext_resource type="Texture2D" uid="uid://c44snqqb0g1w7" path="res://assets/chez_sprite_sheets/chez_idle-Sheet.png" id="2_iywv6"]
-[ext_resource type="Script" uid="uid://cl7f7uahrl8yc" path="res://scripts/player_scripts/state_machine.gd" id="3_2axt3"]
 [ext_resource type="Texture2D" uid="uid://cbopqvya7casi" path="res://assets/chez_sprite_sheets/chez_jump-Sheet.png" id="3_tdvhh"]
 [ext_resource type="Script" uid="uid://meh20fpseg8j" path="res://scripts/player_scripts/idle_state.gd" id="4_7i0th"]
 [ext_resource type="Texture2D" uid="uid://3wfyouppbtgs" path="res://assets/chez_sprite_sheets/chez_run-Sheet.png" id="4_473ty"]
+[ext_resource type="Script" uid="uid://dgul18wg8he5p" path="res://scripts/state_machine_template/state_machine.gd" id="5_5shxv"]
 [ext_resource type="Script" uid="uid://c3nel2orxoy7j" path="res://scripts/player_scripts/running_state.gd" id="5_iywv6"]
 [ext_resource type="Script" uid="uid://dlspvsa677pg" path="res://scripts/player_scripts/jumping_state.gd" id="6_2axt3"]
 [ext_resource type="Script" uid="uid://c0gnx5n7p6slh" path="res://scripts/player_scripts/falling_state.gd" id="9_5shxv"]
@@ -311,33 +311,6 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="Animation" id="Animation_bqgp3"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"idle"]
-}
-
 [sub_resource type="Animation" id="Animation_5t831"]
 resource_name = "idle"
 step = 0.083333336
@@ -396,6 +369,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_5uphw"]
 resource_name = "run"
+loop_mode = 1
 step = 0.083333336
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -424,7 +398,6 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cd375"]
 _data = {
-&"RESET": SubResource("Animation_bqgp3"),
 &"idle": SubResource("Animation_5t831"),
 &"jump": SubResource("Animation_wnq8f"),
 &"run": SubResource("Animation_5uphw")
@@ -446,21 +419,24 @@ animation = &"idle"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1355675480]
 libraries/ = SubResource("AnimationLibrary_cd375")
-autoplay = &"idle"
 
 [node name="StateMachine" type="Node" parent="." unique_id=18331446 node_paths=PackedStringArray("current_state")]
-script = ExtResource("3_2axt3")
+script = ExtResource("5_5shxv")
 current_state = NodePath("IdleState")
 
-[node name="IdleState" type="Node" parent="StateMachine" unique_id=762132899]
+[node name="IdleState" type="Node" parent="StateMachine" unique_id=762132899 node_paths=PackedStringArray("chez")]
 script = ExtResource("4_7i0th")
+chez = NodePath("../..")
 
-[node name="RunningState" type="Node" parent="StateMachine" unique_id=1782253207]
+[node name="RunningState" type="Node" parent="StateMachine" unique_id=1782253207 node_paths=PackedStringArray("chez")]
 script = ExtResource("5_iywv6")
+chez = NodePath("../..")
 
-[node name="JumpingState" type="Node" parent="StateMachine" unique_id=631075930]
+[node name="JumpingState" type="Node" parent="StateMachine" unique_id=631075930 node_paths=PackedStringArray("chez")]
 script = ExtResource("6_2axt3")
+chez = NodePath("../..")
 
-[node name="FallingState" type="Node" parent="StateMachine" unique_id=1823676478]
+[node name="FallingState" type="Node" parent="StateMachine" unique_id=1823676478 node_paths=PackedStringArray("chez")]
 script = ExtResource("9_5shxv")
+chez = NodePath("../..")
 metadata/_custom_type_script = "uid://b7r0bfwltiusf"

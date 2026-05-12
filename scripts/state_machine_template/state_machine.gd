@@ -29,9 +29,12 @@ func _physics_process(delta: float) -> void:
 
 func change_state(new_state_name: String) -> void:
 	var new_state: State = states.get(new_state_name)
-	
 	assert(new_state, "State not found: " + new_state_name)
 	
-	current_state.exit()
-	new_state.enter()
-	current_state = new_state
+	if new_state != null:
+		if new_state != current_state:
+			current_state.exit()
+			new_state.enter()
+			current_state = new_state
+	else:
+		push_warning("State does not exist")

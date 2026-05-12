@@ -1,0 +1,16 @@
+[gd_scene format=4 uid="uid://dvacdaknreip8"]
+
+[ext_resource type="TileSet" uid="uid://hju7pfludsmp" path="res://resources/platform_tiles.tres" id="1_2e2v2"]
+[ext_resource type="PackedScene" uid="uid://d4ec3vnmhnjud" path="res://scenes/chez.tscn" id="2_jw6o7"]
+
+[node name="Chez_Testing_Grounds" type="Node2D" unique_id=1568609149]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=47626936]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAkAAAABAAAAAAABAAkAAAACAAAAAAABAAkAAAADAAAAAAABAAkAAAAEAAAAAAABAAkAAAAFAAAAAAABAAkAAAAGAAAAAAABAAkAAAAHAAAAAAABAAkAAAAIAAAAAAABAAkAAAAJAAAAAAABAAkAAAAKAAAAAAABAAkAAAALAAAAAAABAAkAAAAMAAAAAAABAAkAAAANAAAAAAABAAkAAAAOAAAAAAABAAkAAAAPAAAAAAABAAkAAAAQAAAAAAABAAkAAAARAAAAAAABAAkAAAASAAAAAAABAAkAAAATAAAAAAABAAkAAAAUAAAAAAABAAkAAAAVAAAAAAABAAkAAAAWAAAAAAABAAkAAAAXAAAAAAABAAkAAAAYAAAAAAABAAkAAAAZAAAAAAABAAkAAAAaAAAAAAABAAkAAAAbAAAAAAABAAkAAAAcAAAAAAABAAkAAAAdAAAAAAABAAkAAAAeAAAAAAABAAkAAAAfAAAAAAABAAkAAAAgAAAAAAABAAkAAAA=")
+tile_set = ExtResource("1_2e2v2")
+
+[node name="Chez" parent="." unique_id=285485107 instance=ExtResource("2_jw6o7")]
+position = Vector2(218, -3)
+
+[node name="Camera2D" type="Camera2D" parent="Chez" unique_id=1181616813]
+zoom = Vector2(4, 4)

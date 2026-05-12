@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d4ec3vnmhnjud"]
 
-[ext_resource type="Script" uid="uid://cen2qs3nfrtav" path="res://scripts/player_scripts/chez_pc_placeholder.gd" id="1_71s15"]
+[ext_resource type="Script" uid="uid://cen2qs3nfrtav" path="res://scripts/player_scripts/chez.gd" id="1_71s15"]
 [ext_resource type="Texture2D" uid="uid://c44snqqb0g1w7" path="res://assets/chez_sprite_sheets/chez_idle-Sheet.png" id="2_iywv6"]
 [ext_resource type="Script" uid="uid://cl7f7uahrl8yc" path="res://scripts/player_scripts/state_machine.gd" id="3_2axt3"]
 [ext_resource type="Texture2D" uid="uid://cbopqvya7casi" path="res://assets/chez_sprite_sheets/chez_jump-Sheet.png" id="3_tdvhh"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://3wfyouppbtgs" path="res://assets/chez_sprite_sheets/chez_run-Sheet.png" id="4_473ty"]
 [ext_resource type="Script" uid="uid://c3nel2orxoy7j" path="res://scripts/player_scripts/running_state.gd" id="5_iywv6"]
 [ext_resource type="Script" uid="uid://dlspvsa677pg" path="res://scripts/player_scripts/jumping_state.gd" id="6_2axt3"]
+[ext_resource type="Script" uid="uid://c0gnx5n7p6slh" path="res://scripts/player_scripts/falling_state.gd" id="9_5shxv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pfukx"]
 size = Vector2(16, 16)
@@ -429,7 +430,7 @@ _data = {
 &"run": SubResource("Animation_5uphw")
 }
 
-[node name="Chez_PC_Placeholder" type="CharacterBody2D" unique_id=285485107 groups=["player"]]
+[node name="Chez" type="CharacterBody2D" unique_id=285485107 groups=["player"]]
 collision_mask = 2
 script = ExtResource("1_71s15")
 
@@ -440,7 +441,6 @@ shape = SubResource("RectangleShape2D_pfukx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1397022363]
 position = Vector2(0, -8)
-scale = Vector2(0.125, 0.125)
 sprite_frames = SubResource("SpriteFrames_o5myw")
 animation = &"idle"
 
@@ -460,3 +460,7 @@ script = ExtResource("5_iywv6")
 
 [node name="JumpingState" type="Node" parent="StateMachine" unique_id=631075930]
 script = ExtResource("6_2axt3")
+
+[node name="FallingState" type="Node" parent="StateMachine" unique_id=1823676478]
+script = ExtResource("9_5shxv")
+metadata/_custom_type_script = "uid://b7r0bfwltiusf"

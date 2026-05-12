@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg71jww452hw"
-path="res://.godot/imported/placeholder_tiles.png-417a73f5404028ad660c1cf6e16cc198.ctex"
+uid="uid://clnn5orbovb37"
+path="res://.godot/imported/knife2-main.png-86c004f9b46d039708e0dc6e0afda18d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/placeholder_tiles.png"
-dest_files=["res://.godot/imported/placeholder_tiles.png-417a73f5404028ad660c1cf6e16cc198.ctex"]
+source_file="res://assets/sprites/knife_sprites/knife2-main.png"
+dest_files=["res://.godot/imported/knife2-main.png-86c004f9b46d039708e0dc6e0afda18d.ctex"]
 
 [params]
 

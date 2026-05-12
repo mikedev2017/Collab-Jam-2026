@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxio0q3n822mb"]
 
-[ext_resource type="Texture2D" uid="uid://b3ry4pg2i74ji" path="res://sprites/chef-placeholder-sprite.png" id="1_1slas"]
+[ext_resource type="Texture2D" uid="uid://b3ry4pg2i74ji" path="res://assets/sprites/chef-placeholder-sprite.png" id="1_1slas"]
 
 [node name="Chef" type="Node2D" unique_id=1079395461]
 

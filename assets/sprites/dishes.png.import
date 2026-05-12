@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfuq0x4waanpf"
-path="res://.godot/imported/dishes-abstract.png-a0be3f060de250951868286e966477ca.ctex"
+uid="uid://bw8du7w8nu48d"
+path="res://.godot/imported/dishes.png-31f98d2c1074d47cb14b2c8778cd0953.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/dishes-abstract.png"
-dest_files=["res://.godot/imported/dishes-abstract.png-a0be3f060de250951868286e966477ca.ctex"]
+source_file="res://assets/sprites/dishes.png"
+dest_files=["res://.godot/imported/dishes.png-31f98d2c1074d47cb14b2c8778cd0953.ctex"]
 
 [params]
 

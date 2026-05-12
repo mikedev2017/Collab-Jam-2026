@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://3wbfykge4ch8"]
+
+[ext_resource type="Script" uid="uid://bwf7hv0mvrwir" path="res://scripts/enemy/knife_gun_manager.gd" id="1_wmhj2"]
+[ext_resource type="Texture2D" uid="uid://64ybock02e0g" path="res://assets/icon.svg" id="2_3edmw"]
+
+[node name="KnifeGunManager" type="Node2D" unique_id=1478557423]
+script = ExtResource("1_wmhj2")
+
+[node name="FireRateTimer" type="Timer" parent="." unique_id=1170244508]
+
+[node name="StartAttack" type="Timer" parent="." unique_id=1039699854]
+one_shot = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1654358507]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_3edmw")
+
+[connection signal="timeout" from="FireRateTimer" to="." method="_on_fire_rate_timer_timeout"]
+[connection signal="timeout" from="StartAttack" to="." method="_on_start_attack_timeout"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw8du7w8nu48d"
-path="res://.godot/imported/dishes.png-d3006897e528a7f30f55e898461d33c3.ctex"
+uid="uid://b2is4k3q7aay4"
+path="res://.godot/imported/Knife1.png-a7555907d7082ada65b352ef7f485a8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/dishes.png"
-dest_files=["res://.godot/imported/dishes.png-d3006897e528a7f30f55e898461d33c3.ctex"]
+source_file="res://assets/sprites/knife_sprites/Knife1.png"
+dest_files=["res://.godot/imported/Knife1.png-a7555907d7082ada65b352ef7f485a8f.ctex"]
 
 [params]
 

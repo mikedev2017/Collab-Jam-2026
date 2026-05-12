@@ -88,11 +88,11 @@ anchor_mode = 0
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
-[node name="Area2D_KillZone" parent="Camera2D" unique_id=212058626 instance=ExtResource("3_4asn1")]
-
 [node name="Chef" parent="Camera2D" unique_id=1079395461 instance=ExtResource("4_dw7u0")]
 z_index = 9
 position = Vector2(-40, 123)
+
+[node name="Area2D_KillZone" parent="Camera2D" unique_id=212058626 instance=ExtResource("3_4asn1")]
 
 [node name="CanvasLayerHUD" type="CanvasLayer" parent="." unique_id=970745591]
 

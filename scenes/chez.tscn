@@ -439,4 +439,3 @@ chez = NodePath("../..")
 [node name="FallingState" type="Node" parent="StateMachine" unique_id=1823676478 node_paths=PackedStringArray("chez")]
 script = ExtResource("9_5shxv")
 chez = NodePath("../..")
-metadata/_custom_type_script = "uid://b7r0bfwltiusf"

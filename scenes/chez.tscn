@@ -413,6 +413,7 @@ position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_pfukx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1397022363]
+texture_filter = 1
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_o5myw")
 animation = &"idle"

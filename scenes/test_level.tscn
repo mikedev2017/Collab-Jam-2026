@@ -6,9 +6,10 @@
 [ext_resource type="Script" uid="uid://b1wdr8w8qvjfy" path="res://scripts/chef_scripts/chef.gd" id="3_7gix3"]
 [ext_resource type="PackedScene" uid="uid://bxio0q3n822mb" path="res://scenes/chef.tscn" id="4_dw7u0"]
 [ext_resource type="Script" uid="uid://c2d7gj605yu1r" path="res://scripts/kill_zone.gd" id="5_fyxdr"]
-[ext_resource type="Texture2D" uid="uid://cfuq0x4waanpf" path="res://sprites/dishes-abstract.png" id="6_kpk0m"]
+[ext_resource type="Texture2D" uid="uid://cfuq0x4waanpf" path="res://assets/sprites/dishes-abstract.png" id="6_kpk0m"]
 [ext_resource type="TileSet" uid="uid://hju7pfludsmp" path="res://resources/platform_tiles.tres" id="7_ahbqi"]
-[ext_resource type="Texture2D" uid="uid://dg71jww452hw" path="res://sprites/placeholder_tiles.png" id="8_13hs1"]
+[ext_resource type="Texture2D" uid="uid://dg71jww452hw" path="res://assets/sprites/placeholder_tiles.png" id="8_13hs1"]
+[ext_resource type="PackedScene" uid="uid://3wbfykge4ch8" path="res://scenes/knife_gun_manager.tscn" id="9_7gix3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i380p"]
 bg_color = Color(0.30904898, 0.27608284, 0.2757008, 1)
@@ -99,6 +100,17 @@ offset = Vector2(0, 20.295)
 anchor_mode = 0
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
+
+[node name="Chef" parent="Camera2D" unique_id=1079395461 instance=ExtResource("4_dw7u0")]
+z_index = 9
+position = Vector2(-40, 123)
+
+[node name="Area2D_KillZone" parent="Camera2D" unique_id=212058626 instance=ExtResource("3_4asn1")]
+
+[node name="KnifeGunManager" parent="Camera2D" unique_id=1478557423 instance=ExtResource("9_7gix3")]
+z_index = 10
+position = Vector2(-28, 134)
+wait_before_attack = 2.0
 
 [node name="CanvasLayerHUD" type="CanvasLayer" parent="." unique_id=970745591]
 

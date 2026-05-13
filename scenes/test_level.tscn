@@ -101,13 +101,9 @@ anchor_mode = 0
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
-[node name="Chef" parent="Camera2D" unique_id=1079395461 instance=ExtResource("4_dw7u0")]
-z_index = 9
-position = Vector2(-40, 123)
+[node name="Camera2D#Area2D_KillZone" parent="." unique_id=1944954826 instance=ExtResource("3_4asn1")]
 
-[node name="Area2D_KillZone" parent="Camera2D" unique_id=212058626 instance=ExtResource("3_4asn1")]
-
-[node name="KnifeGunManager" parent="Camera2D" unique_id=1478557423 instance=ExtResource("9_7gix3")]
+[node name="Camera2D#KnifeGunManager" parent="." unique_id=1478557423 instance=ExtResource("9_7gix3")]
 z_index = 10
 position = Vector2(-28, 134)
 wait_before_attack = 2.0

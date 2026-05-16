@@ -10,7 +10,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("skip_cutscene"):
-		SceneLoader.load_scene("res://scenes/main_menu.tscn")
+		SceneLoader.load_scene("res://scenes/test_level.tscn")
 	
 	if !animation_player.is_playing():
-		SceneLoader.load_scene("res://scenes/main_menu.tscn")
+		SceneLoader.load_scene("res://scenes/test_level.tscn")

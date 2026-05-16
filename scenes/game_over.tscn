@@ -13,6 +13,7 @@ anchors_preset = 0
 script = ExtResource("1_wqhvx")
 
 [node name="PanelGameOverBackground" type="Panel" parent="." unique_id=1769547915]
+z_index = 9
 layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 720.0

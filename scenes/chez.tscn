@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://c0gnx5n7p6slh" path="res://scripts/player_scripts/falling_state.gd" id="9_5shxv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pfukx"]
-size = Vector2(16, 16)
+size = Vector2(9, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c1q6d"]
 atlas = ExtResource("2_iywv6")
@@ -409,7 +409,7 @@ script = ExtResource("1_71s15")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=50707463]
 z_index = 1
-position = Vector2(0, -8)
+position = Vector2(-1.5, -8)
 shape = SubResource("RectangleShape2D_pfukx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1397022363]

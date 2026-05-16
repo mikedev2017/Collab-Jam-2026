@@ -92,7 +92,7 @@ libraries/ = SubResource("AnimationLibrary_d56cy")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1656682814]
 modulate = Color(1, 1, 1, 0.4862745)
 texture_filter = 1
-position = Vector2(32, 13)
+position = Vector2(-32, 0)
 sprite_frames = SubResource("SpriteFrames_4ri07")
 autoplay = "default"
 frame = 1

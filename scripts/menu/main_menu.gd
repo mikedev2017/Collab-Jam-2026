@@ -72,4 +72,4 @@ func _on_settings_pressed() -> void:
 
 
 func _on_start_pressed() -> void:
-	SceneLoader.load_scene("res://scenes/levels/Level_1_Crash_Zone.tscn")
+	SceneLoader.load_scene("res://scenes/test_level.tscn")

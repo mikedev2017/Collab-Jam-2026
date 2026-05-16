@@ -2,16 +2,13 @@ extends Node2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	animation_player.play("test")
+	animation_player.play("outro")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(animation_player.is_playing())
-	
 	if Input.is_action_just_pressed("skip_cutscene"):
 		SceneLoader.load_scene("res://scenes/main_menu.tscn")
 	

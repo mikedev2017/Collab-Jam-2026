@@ -12,6 +12,7 @@ script = ExtResource("1_2fp52")
 speed = 200
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1302639450]
+z_index = 5
 rotation = -1.5707964
 texture = ExtResource("2_aa05d")
 

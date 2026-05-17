@@ -229,12 +229,15 @@ sources/0 = SubResource("TileSetAtlasSource_c80g2")
 size = Vector2(5200, 81)
 
 [sub_resource type="Gradient" id="Gradient_qs1vn"]
-colors = PackedColorArray(0.98039216, 0.4117647, 0.039215688, 1, 0.98039216, 0.41568628, 0.039215688, 1)
+offsets = PackedFloat32Array(0, 0.30528846, 0.58413464, 1)
+colors = PackedColorArray(0.98039216, 0.4117647, 0.039215688, 1, 0.99033743, 0.32131886, 0.057779163, 1, 0.99999994, 0.23344496, 0.07581476, 1, 0.7063901, 0.12912554, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_13hs1"]
 gradient = SubResource("Gradient_qs1vn")
 width = 195
 height = 178
+fill_from = Vector2(0.5190972, 0)
+fill_to = Vector2(0.5399306, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qs1vn"]
 size = Vector2(40, 70)
@@ -415,6 +418,7 @@ scale = Vector2(2.565, 2.39)
 z_index = 2
 position = Vector2(2063, 28.000002)
 scale = Vector2(10.655, 2.39)
+amount = 7
 
 [node name="GPUParticles2D7" parent="Soup_bubbles_Group" unique_id=1292471853 instance=ExtResource("16_wvtie")]
 z_index = 2
@@ -462,11 +466,12 @@ position = Vector2(2713, -316.00003)
 scale = Vector2(0.285, 2.39)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1539224542]
-z_index = 2
-offset_left = 1845.0
+modulate = Color(1, 1, 1, 0.95686275)
+z_index = 10
+offset_left = 1857.0
 offset_top = 30.0
-offset_right = 2277.0
-offset_bottom = 173.0
+offset_right = 2273.0
+offset_bottom = 208.0
 texture = SubResource("GradientTexture2D_13hs1")
 
 [node name="Cam_pan_trigger" type="Area2D" parent="." unique_id=538771841 node_paths=PackedStringArray("collision_shape_2d", "camera")]

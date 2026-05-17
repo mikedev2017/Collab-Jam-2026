@@ -31,8 +31,8 @@ anim_offset_max = 0.2146
 
 [node name="GPUParticles2D" type="GPUParticles2D" unique_id=1538828581]
 material = SubResource("CanvasItemMaterial_qk6fm")
-amount = 2
 texture = ExtResource("1_2m3xa")
+lifetime = 0.5
 fixed_fps = 12
 process_material = SubResource("ParticleProcessMaterial_biiop")
 

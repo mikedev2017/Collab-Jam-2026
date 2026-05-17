@@ -5,5 +5,9 @@ extends Area2D
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player") and GameManager.goal_camera_pan:
-		camera.trigger_camera_pan()
+	if !GameManager.goal_camera_has_panned:
+		if body.is_in_group("player"):
+			camera.trigger_camera_pan()
+			GameManager.goal_camera_has_panned = true
+	else:
+		pass

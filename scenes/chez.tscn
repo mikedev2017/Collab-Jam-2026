@@ -9,9 +9,11 @@
 [ext_resource type="Script" uid="uid://c3nel2orxoy7j" path="res://scripts/player_scripts/running_state.gd" id="5_iywv6"]
 [ext_resource type="Script" uid="uid://dlspvsa677pg" path="res://scripts/player_scripts/jumping_state.gd" id="6_2axt3"]
 [ext_resource type="Script" uid="uid://c0gnx5n7p6slh" path="res://scripts/player_scripts/falling_state.gd" id="9_5shxv"]
+[ext_resource type="AudioStream" uid="uid://247etgblispr" path="res://audio/Skateboard Deck Snap-001.wav" id="10_ojtcu"]
+[ext_resource type="AudioStream" uid="uid://6iw3l31w1thx" path="res://audio/SkateboardJump06.wav" id="11_o82i5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pfukx"]
-size = Vector2(9, 16)
+size = Vector2(7, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pjlar"]
 atlas = ExtResource("2_5shxv")
@@ -285,7 +287,7 @@ script = ExtResource("1_71s15")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=50707463]
 z_index = 1
-position = Vector2(-1.5, -8)
+position = Vector2(-0.5, -7)
 shape = SubResource("RectangleShape2D_pfukx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1397022363]
@@ -293,9 +295,6 @@ texture_filter = 1
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_o5myw")
 animation = &"run"
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1355675480]
-libraries/ = SubResource("AnimationLibrary_cd375")
 
 [node name="StateMachine" type="Node" parent="." unique_id=18331446 node_paths=PackedStringArray("current_state")]
 script = ExtResource("5_5shxv")
@@ -316,3 +315,23 @@ chez = NodePath("../..")
 [node name="FallingState" type="Node" parent="StateMachine" unique_id=1823676478 node_paths=PackedStringArray("chez")]
 script = ExtResource("9_5shxv")
 chez = NodePath("../..")
+
+[node name="SFX" type="Node" parent="." unique_id=1719909199]
+
+[node name="Footstep" type="AudioStreamPlayer" parent="SFX" unique_id=2129352482]
+unique_name_in_owner = true
+stream = ExtResource("10_ojtcu")
+pitch_scale = 1.2
+
+[node name="Jump" type="AudioStreamPlayer" parent="SFX" unique_id=1972218406]
+unique_name_in_owner = true
+stream = ExtResource("11_o82i5")
+pitch_scale = 1.5
+max_polyphony = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1355675480]
+libraries/ = SubResource("AnimationLibrary_cd375")
+
+[node name="StepTimer" type="Timer" parent="." unique_id=1545249480]
+unique_name_in_owner = true
+one_shot = true

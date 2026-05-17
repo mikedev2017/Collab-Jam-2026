@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://kv2y2tvuyfsb" path="res://assets/sprites/cutscene_sprites/SG opening 8.jpg" id="8_f0pcv"]
 [ext_resource type="Texture2D" uid="uid://tvlq7a586wdp" path="res://assets/sprites/cutscene_sprites/SG opening 9.jpg" id="9_m3m6x"]
 [ext_resource type="Texture2D" uid="uid://tfnfiweynxcj" path="res://assets/sprites/cutscene_sprites/SG opening 10.jpg" id="10_g5cdg"]
+[ext_resource type="AudioStream" uid="uid://2wewyr68ithx" path="res://audio/3xBlast - I Work in a Cafe Part-Time.wav" id="12_ukn74"]
 
 [sub_resource type="Animation" id="Animation_je41u"]
 length = 0.001
@@ -349,3 +350,7 @@ visible = false
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1413624462]
 position = Vector2(651, 362)
 zoom = Vector2(2, 2)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1806168779]
+unique_name_in_owner = true
+stream = ExtResource("12_ukn74")

@@ -8,11 +8,11 @@ extends Node2D
 
 @export var scrollspeed : float = 1.0
 
-
 var acceleration_marker : float = 200.00
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print(scrollspeed)
+	%AudioStreamPlayer.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

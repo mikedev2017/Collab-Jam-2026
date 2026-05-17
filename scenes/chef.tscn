@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bxio0q3n822mb"]
 
 [ext_resource type="Texture2D" uid="uid://bitql8lqvwr5p" path="res://assets/chef_sprite_sheet/chef-ghost-sprite.png" id="2_gmsil"]
+[ext_resource type="Texture2D" uid="uid://b2is4k3q7aay4" path="res://assets/sprites/knife_sprites/Knife1.png" id="2_jqokb"]
 
 [sub_resource type="Animation" id="Animation_gmsil"]
 length = 0.001
@@ -91,9 +92,15 @@ libraries/ = SubResource("AnimationLibrary_d56cy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1656682814]
 modulate = Color(1, 1, 1, 0.4862745)
+z_index = 1
 texture_filter = 1
 position = Vector2(-32, 0)
 sprite_frames = SubResource("SpriteFrames_4ri07")
 autoplay = "default"
 frame = 1
 frame_progress = 0.5741551
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=750568474]
+position = Vector2(39.999996, -11.000001)
+rotation = -2.0071287
+texture = ExtResource("2_jqokb")

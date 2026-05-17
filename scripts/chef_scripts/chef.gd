@@ -34,11 +34,12 @@ func _process(delta: float) -> void:
 				collision_shape_2d.rotation = deg_to_rad(73.5)
 			# Increase Chef's chase speed over time
 			if self.position.x > acceleration_marker:
-				print("Accelerated")
+				#print("Accelerated")
 				
 				acceleration_marker += 350
 				if chase_speed < chase_speed_max:
 					chase_speed += 20
-					print("Chase speed increased to " + str(chase_speed))
+					#print("Chase speed increased to " + str(chase_speed))
 				elif chase_speed == chase_speed_max:
-					print("Max chase speed reached")
+					#print("Max chase speed reached")
+					pass

@@ -1,23 +1,27 @@
 [gd_scene format=3 uid="uid://dw8yu8xg076lf"]
 
-[ext_resource type="Texture2D" uid="uid://djfdk286tdxrx" path="res://assets/sprites/cutscene_sprites/SG opening 1.png" id="1_1iurh"]
 [ext_resource type="Script" uid="uid://x0fbbkwt6t5e" path="res://scripts/cutscene_scripts/intro_cutscene.gd" id="1_fx1av"]
-[ext_resource type="Texture2D" uid="uid://dtcc7o3rv8546" path="res://assets/sprites/cutscene_sprites/SG opening 2.jpg" id="2_8hq43"]
-[ext_resource type="Texture2D" uid="uid://c3n1xptrpcry0" path="res://assets/sprites/cutscene_sprites/SG opening 3.jpg" id="3_fx1av"]
-[ext_resource type="Texture2D" uid="uid://coipcjdkrf0t1" path="res://assets/sprites/cutscene_sprites/SG opening 4.jpg" id="4_ukn74"]
-[ext_resource type="Texture2D" uid="uid://cxgnkydhj5lc8" path="res://assets/sprites/cutscene_sprites/SG opening 5.jpg" id="5_qtmnn"]
-[ext_resource type="Texture2D" uid="uid://c6kabcqwhn6o3" path="res://assets/sprites/cutscene_sprites/SG opening 6.jpg" id="6_icj2m"]
-[ext_resource type="Texture2D" uid="uid://cfvaf0ml8rcrh" path="res://assets/sprites/cutscene_sprites/SG opening 7.jpg" id="7_kxktx"]
-[ext_resource type="Texture2D" uid="uid://kv2y2tvuyfsb" path="res://assets/sprites/cutscene_sprites/SG opening 8.jpg" id="8_f0pcv"]
-[ext_resource type="Texture2D" uid="uid://tvlq7a586wdp" path="res://assets/sprites/cutscene_sprites/SG opening 9.jpg" id="9_m3m6x"]
-[ext_resource type="Texture2D" uid="uid://tfnfiweynxcj" path="res://assets/sprites/cutscene_sprites/SG opening 10.jpg" id="10_g5cdg"]
+[ext_resource type="Texture2D" uid="uid://b10xqrsnoxsip" path="res://assets/sprites/intro_cutscene_story/intro_1.png" id="2_kxktx"]
+[ext_resource type="Texture2D" uid="uid://c0lqettof2lml" path="res://assets/sprites/intro_cutscene_story/intro_2.png" id="3_f0pcv"]
+[ext_resource type="Texture2D" uid="uid://dpdy4qqrn7634" path="res://assets/sprites/intro_cutscene_story/intro_3.png" id="4_m3m6x"]
+[ext_resource type="Texture2D" uid="uid://b2awfvikp8irm" path="res://assets/sprites/intro_cutscene_story/intro_4.png" id="5_g5cdg"]
+[ext_resource type="Texture2D" uid="uid://phv27lhvhbd" path="res://assets/sprites/intro_cutscene_story/intro_5.png" id="6_je41u"]
+[ext_resource type="Texture2D" uid="uid://cno08asqbj0nv" path="res://assets/sprites/intro_cutscene_story/intro_6.png" id="7_7tkrm"]
+[ext_resource type="Texture2D" uid="uid://y6co6c3cuxct" path="res://assets/sprites/intro_cutscene_story/intro_7.png" id="8_6gj7g"]
+[ext_resource type="Texture2D" uid="uid://c0qglc3jc060u" path="res://assets/sprites/intro_cutscene_story/intro_8.png" id="9_nieb5"]
+[ext_resource type="Texture2D" uid="uid://f6x5fc7su1fe" path="res://assets/sprites/intro_cutscene_story/intro_9.png" id="10_iuatu"]
+[ext_resource type="Texture2D" uid="uid://bbuquxjuiobre" path="res://assets/sprites/intro_cutscene_story/intro_10.png" id="11_ieyom"]
+[ext_resource type="Texture2D" uid="uid://bu3ss7pcmila5" path="res://assets/sprites/intro_cutscene_story/intro_11.png" id="12_q8p7g"]
+[ext_resource type="AudioStream" uid="uid://2wewyr68ithx" path="res://audio/3xBlast - I Work in a Cafe Part-Time.wav" id="12_ukn74"]
+[ext_resource type="Texture2D" uid="uid://dfoqmb7pamro" path="res://assets/sprites/intro_cutscene_story/intro_12.png" id="13_mg4kr"]
+[ext_resource type="Texture2D" uid="uid://cpiswx7j58hgl" path="res://assets/sprites/intro_cutscene_story/intro_13.png" id="14_ehef0"]
 
 [sub_resource type="Animation" id="Animation_je41u"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Opening1:visible")
+tracks/0/path = NodePath("Intro2:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -29,7 +33,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Opening2:visible")
+tracks/1/path = NodePath("Intro3:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -41,7 +45,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Opening3:visible")
+tracks/2/path = NodePath("Intro4:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -53,7 +57,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Opening4:visible")
+tracks/3/path = NodePath("Intro5:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -65,7 +69,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Opening5:visible")
+tracks/4/path = NodePath("Intro6:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -77,7 +81,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Opening6:visible")
+tracks/5/path = NodePath("Intro7:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -89,7 +93,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Opening7:visible")
+tracks/6/path = NodePath("Intro8:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -101,7 +105,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Opening8:visible")
+tracks/7/path = NodePath("Intro9:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -113,7 +117,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Opening9:visible")
+tracks/8/path = NodePath("Intro10:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -122,26 +126,14 @@ tracks/8/keys = {
 "update": 1,
 "values": [false]
 }
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Camera2D:zoom")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2, 2)]
-}
 
 [sub_resource type="Animation" id="Animation_8464f"]
 resource_name = "introduction"
-length = 15.0
+length = 20.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Opening0:visible")
+tracks/0/path = NodePath("Intro1:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -153,7 +145,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Opening1:visible")
+tracks/1/path = NodePath("Intro2:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -165,7 +157,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Opening2:visible")
+tracks/2/path = NodePath("Intro3:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -177,7 +169,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Opening3:visible")
+tracks/3/path = NodePath("Intro4:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -189,7 +181,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Opening4:visible")
+tracks/4/path = NodePath("Intro5:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -201,7 +193,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Opening5:visible")
+tracks/5/path = NodePath("Intro6:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -213,7 +205,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Opening6:visible")
+tracks/6/path = NodePath("Intro7:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -225,7 +217,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Opening7:visible")
+tracks/7/path = NodePath("Intro8:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -237,7 +229,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Opening8:visible")
+tracks/8/path = NodePath("Intro9:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -249,7 +241,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Opening9:visible")
+tracks/9/path = NodePath("Intro10:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -261,14 +253,38 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Camera2D:zoom")
+tracks/10/path = NodePath("Intro11:visible")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(0, 0),
-"update": 0,
-"values": [Vector2(2, 2), Vector2(1, 1)]
+"times": PackedFloat32Array(15),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Intro12:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(16.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Intro13:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(18),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iwduf"]
@@ -283,69 +299,61 @@ script = ExtResource("1_fx1av")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1616007979]
 libraries/ = SubResource("AnimationLibrary_iwduf")
 
-[node name="Opening0" type="Sprite2D" parent="." unique_id=1884055607]
-position = Vector2(651, 319)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("1_1iurh")
+[node name="Intro1" type="Sprite2D" parent="." unique_id=1884055607]
+texture = ExtResource("2_kxktx")
 
-[node name="Opening1" type="Sprite2D" parent="." unique_id=1983653318]
+[node name="Intro2" type="Sprite2D" parent="." unique_id=1983653318]
 visible = false
-position = Vector2(653.00006, 366)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("2_8hq43")
+texture = ExtResource("3_f0pcv")
 
-[node name="Opening2" type="Sprite2D" parent="." unique_id=1697737060]
+[node name="Intro3" type="Sprite2D" parent="." unique_id=1697737060]
 visible = false
-position = Vector2(650, 394)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("3_fx1av")
+texture = ExtResource("4_m3m6x")
 
-[node name="Opening3" type="Sprite2D" parent="." unique_id=1873907419]
+[node name="Intro4" type="Sprite2D" parent="." unique_id=1873907419]
 visible = false
-position = Vector2(650, 424.99997)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("4_ukn74")
+texture = ExtResource("5_g5cdg")
 
-[node name="Opening4" type="Sprite2D" parent="." unique_id=1073160501]
+[node name="Intro5" type="Sprite2D" parent="." unique_id=1073160501]
 visible = false
-position = Vector2(647, 447)
-rotation = 1.5707964
-scale = Vector2(0.9, 0.9)
-texture = ExtResource("5_qtmnn")
+texture = ExtResource("6_je41u")
 
-[node name="Opening5" type="Sprite2D" parent="." unique_id=1608851590]
+[node name="Intro6" type="Sprite2D" parent="." unique_id=1608851590]
 visible = false
-position = Vector2(636.99994, 368)
-scale = Vector2(0.85, 0.85)
-texture = ExtResource("6_icj2m")
+texture = ExtResource("7_7tkrm")
 
-[node name="Opening6" type="Sprite2D" parent="." unique_id=167990577]
+[node name="Intro7" type="Sprite2D" parent="." unique_id=167990577]
 visible = false
-position = Vector2(639, 455)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("7_kxktx")
+texture = ExtResource("8_6gj7g")
 
-[node name="Opening7" type="Sprite2D" parent="." unique_id=937558900]
+[node name="Intro8" type="Sprite2D" parent="." unique_id=937558900]
 visible = false
-position = Vector2(646, 383)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("8_f0pcv")
+texture = ExtResource("9_nieb5")
 
-[node name="Opening8" type="Sprite2D" parent="." unique_id=12412399]
+[node name="Intro9" type="Sprite2D" parent="." unique_id=12412399]
 visible = false
-position = Vector2(639, 480.99997)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("9_m3m6x")
+texture = ExtResource("10_iuatu")
 
-[node name="Opening9" type="Sprite2D" parent="." unique_id=982483027]
+[node name="Intro10" type="Sprite2D" parent="." unique_id=982483027]
 visible = false
-position = Vector2(644.00006, 459)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("10_g5cdg")
+texture = ExtResource("11_ieyom")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=2057476603]
+[node name="Intro11" type="Sprite2D" parent="." unique_id=2037772375]
 visible = false
+texture = ExtResource("12_q8p7g")
+
+[node name="Intro12" type="Sprite2D" parent="." unique_id=207676528]
+visible = false
+texture = ExtResource("13_mg4kr")
+
+[node name="Intro13" type="Sprite2D" parent="." unique_id=1719651917]
+visible = false
+texture = ExtResource("14_ehef0")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1413624462]
-position = Vector2(651, 362)
-zoom = Vector2(2, 2)
+visible = false
+zoom = Vector2(1.5, 1.5)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1806168779]
+unique_name_in_owner = true
+stream = ExtResource("12_ukn74")

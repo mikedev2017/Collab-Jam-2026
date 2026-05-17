@@ -1,16 +1,57 @@
 [gd_scene format=3 uid="uid://b0n2gciihed80"]
 
 [ext_resource type="Script" uid="uid://cnaedggd1l7ho" path="res://scripts/game_over.gd" id="1_wqhvx"]
-[ext_resource type="Texture2D" uid="uid://64ybock02e0g" path="res://assets/icon.svg" id="2_tbwuq"]
+[ext_resource type="Texture2D" uid="uid://dtkn1b3f0bp24" path="res://assets/sprites/cutscene_sprites/SG-storyboard-plated-chez.png" id="2_wqhvx"]
+[ext_resource type="Texture2D" uid="uid://by7txd118j3xa" path="res://assets/sprites/cutscene_sprites/SG-storyboard-cheeze-slice-final.png" id="3_tbwuq"]
+[ext_resource type="AudioStream" uid="uid://dw2vfx8hwnvh8" path="res://audio/splat.wav" id="4_racf3"]
+
+[sub_resource type="Animation" id="Animation_racf3"]
+resource_name = "Kill_Chez"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelGameOverBackground/SgStoryboardCheezeSliceFinal:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.6, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7m3ot"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelGameOverBackground/SgStoryboardCheezeSliceFinal:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v3hpu"]
+_data = {
+&"Kill_Chez": SubResource("Animation_racf3"),
+&"RESET": SubResource("Animation_7m3ot")
+}
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yxx3c"]
-texture = ExtResource("2_tbwuq")
-modulate_color = Color(0.26657522, 0.2665752, 0.2665752, 1)
+texture = ExtResource("2_wqhvx")
 
 [node name="GameOver" type="Control" unique_id=1254711190]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_wqhvx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1606976548]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_v3hpu")
 
 [node name="PanelGameOverBackground" type="Panel" parent="." unique_id=1769547915]
 z_index = 9
@@ -19,18 +60,10 @@ offset_right = 1280.0
 offset_bottom = 720.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_yxx3c")
 
-[node name="Label" type="Label" parent="PanelGameOverBackground" unique_id=1822855371]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -130.0
-offset_top = 199.0
-offset_right = 130.0
-offset_bottom = 266.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 48
-text = "Game Over"
+[node name="SgStoryboardCheezeSliceFinal" type="Sprite2D" parent="PanelGameOverBackground" unique_id=1035900901]
+position = Vector2(646, 359.5)
+scale = Vector2(2.4965274, 2.4965277)
+texture = ExtResource("3_tbwuq")
 
 [node name="ButtonRestartGame" type="Button" parent="PanelGameOverBackground" unique_id=556208385]
 layout_mode = 1
@@ -40,12 +73,19 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -88.0
-offset_top = -37.5
+offset_top = 248.0
 offset_right = 88.0
-offset_bottom = 37.5
+offset_bottom = 323.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 48
-text = "Restart"
+text = "---->"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=291347133]
+anchor_mode = 0
+
+[node name="Kill_Sound" type="AudioStreamPlayer2D" parent="." unique_id=1944890313]
+unique_name_in_owner = true
+stream = ExtResource("4_racf3")
 
 [connection signal="pressed" from="PanelGameOverBackground/ButtonRestartGame" to="." method="_on_button_restart_game_pressed"]

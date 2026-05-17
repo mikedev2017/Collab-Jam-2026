@@ -1,0 +1,212 @@
+[gd_scene format=3 uid="uid://cs32qp0fp6a8s"]
+
+[ext_resource type="Script" uid="uid://vawdyl62akgo" path="res://scripts/cutscene_scripts/outro_cutscene.gd" id="1_gd7gg"]
+[ext_resource type="Texture2D" uid="uid://ckksrdo7fab4a" path="res://assets/sprites/cutscene_sprites/SG-storyboard-chez-escape-1.png" id="2_ap64n"]
+[ext_resource type="Texture2D" uid="uid://bblgk3n68i586" path="res://assets/sprites/cutscene_sprites/SG-storyboard-chez-escape-2.png" id="3_rdiv8"]
+[ext_resource type="Shader" uid="uid://cx7wsloaw2aw7" path="res://resources/outro_cutscene.gdshader" id="4_ap64n"]
+[ext_resource type="Texture2D" uid="uid://bh3oluntd0ubf" path="res://assets/sprites/cutscene_sprites/SG-storyboard-chez-escape-3.png" id="4_yiec6"]
+[ext_resource type="AudioStream" uid="uid://cdqedlvo26ts4" path="res://audio/3xBlast - Just Add Synths.wav" id="6_rdiv8"]
+
+[sub_resource type="Animation" id="Animation_1r05t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SgStoryboardChezEscape2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SgStoryboardChezEscape3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SgStoryboardChezEscape3:material:shader_parameter/fade")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SgStoryboardChezEscape1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_0upd4"]
+resource_name = "outro"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SgStoryboardChezEscape1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SgStoryboardChezEscape2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(0, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SgStoryboardChezEscape3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(0, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SgStoryboardChezEscape3:material:shader_parameter/fade")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3, 6.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3, 6.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -10.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 6.5),
+"transitions": PackedFloat32Array(0, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8euu8"]
+_data = {
+&"RESET": SubResource("Animation_1r05t"),
+&"outro": SubResource("Animation_0upd4")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rdiv8"]
+shader = ExtResource("4_ap64n")
+shader_parameter/fade = 1.0
+
+[node name="OutroCutscene" type="Node2D" unique_id=760592585]
+script = ExtResource("1_gd7gg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1208014501]
+libraries/ = SubResource("AnimationLibrary_8euu8")
+
+[node name="Panel" type="Panel" parent="." unique_id=1583315017]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.0
+offset_top = -144.0
+offset_right = 251.0
+offset_bottom = 144.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SgStoryboardChezEscape1" type="Sprite2D" parent="." unique_id=416557794]
+texture = ExtResource("2_ap64n")
+
+[node name="SgStoryboardChezEscape2" type="Sprite2D" parent="." unique_id=1823623500]
+visible = false
+texture = ExtResource("3_rdiv8")
+
+[node name="SgStoryboardChezEscape3" type="Sprite2D" parent="." unique_id=1028579183]
+visible = false
+material = SubResource("ShaderMaterial_rdiv8")
+position = Vector2(-1, 3)
+texture = ExtResource("4_yiec6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=360992599]
+zoom = Vector2(2.6, 2.6)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1792503286]
+unique_name_in_owner = true
+stream = ExtResource("6_rdiv8")

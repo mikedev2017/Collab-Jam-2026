@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://4pmgrwt133l1"]
+
+[ext_resource type="Script" uid="uid://dqxlqy04uahhe" path="res://scripts/cutscene_scripts/splash_menu.gd" id="1_tsw5f"]
+[ext_resource type="Texture2D" uid="uid://b0lls012ao672" path="res://assets/sprites/Main_thumbnail.png" id="2_dw21q"]
+[ext_resource type="Texture2D" uid="uid://dv4s2ekeprtbx" path="res://assets/chez_sprite_sheets/chez_run-Sheet_v2.png" id="3_bqxqg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfid2"]
+atlas = ExtResource("3_bqxqg")
+region = Rect2(16, 0, 16, 16)
+
+[node name="SplashMenu" type="Node2D" unique_id=1196004067]
+script = ExtResource("1_tsw5f")
+
+[node name="MainThumbnail" type="Sprite2D" parent="." unique_id=503307323]
+scale = Vector2(1.02, 0.72)
+texture = ExtResource("2_dw21q")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=952742393]
+scale = Vector2(1, 0.99302924)
+zoom = Vector2(2, 2)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1276029383]
+offset_left = 79.0
+offset_top = 100.0
+offset_right = 319.0
+offset_bottom = 180.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Button" type="Button" parent="MarginContainer" unique_id=788563779]
+layout_mode = 2
+text = "===============>"
+icon = SubResource("AtlasTexture_yfid2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1366171158]
+
+[connection signal="pressed" from="MarginContainer/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dgjey28suw082"]
+
+[ext_resource type="Texture2D" uid="uid://cj16bmbsrof8k" path="res://assets/sprites/soup_pot_wholes.png" id="1_s5piv"]
+[ext_resource type="Texture2D" uid="uid://b3h0vbm2msbpu" path="res://assets/sprites/soup_bubble_sprites.png" id="2_6jd00"]
+[ext_resource type="PackedScene" uid="uid://borhi0o2v58a3" path="res://scenes/kill_zone.tscn" id="3_6jd00"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jd00"]
+size = Vector2(45, 42)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_s5piv"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_c61fu"]
+_data = [Vector2(0, 0.5167786), 0.0, 0.0, 0, 0, Vector2(0.49999997, 1), 0.0, 0.0, 0, 0, Vector2(0.99462366, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_l18k4"]
+curve = SubResource("Curve_c61fu")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jrcdy"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(20.55, 1, 1)
+direction = Vector3(0, -5.32, 0)
+initial_velocity_max = 5.0
+gravity = Vector3(0, -1, 0)
+damping_max = 21.03
+scale_min = 0.5
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_l18k4")
+anim_speed_max = 0.25
+anim_offset_max = 0.2146
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=225147954]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=255018559]
+z_index = 1
+position = Vector2(-0.5, -3)
+shape = SubResource("RectangleShape2D_6jd00")
+
+[node name="Node2D" type="Sprite2D" parent="." unique_id=1706568021]
+texture = ExtResource("1_s5piv")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D" unique_id=391954985]
+material = SubResource("CanvasItemMaterial_s5piv")
+position = Vector2(1, -29)
+amount = 2
+texture = ExtResource("2_6jd00")
+fixed_fps = 12
+process_material = SubResource("ParticleProcessMaterial_jrcdy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1769273637]
+
+[node name="Area2D_KillZone" parent="." unique_id=212058626 instance=ExtResource("3_6jd00")]
+position = Vector2(-20.000002, -27)
+scale = Vector2(0.84, 0.01)

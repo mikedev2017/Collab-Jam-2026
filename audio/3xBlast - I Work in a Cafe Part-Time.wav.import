@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://2wewyr68ithx"
+path="res://.godot/imported/3xBlast - I Work in a Cafe Part-Time.wav-4d2084f374d8ffecc370fe68d1ae988e.sample"
+
+[deps]
+
+source_file="res://audio/3xBlast - I Work in a Cafe Part-Time.wav"
+dest_files=["res://.godot/imported/3xBlast - I Work in a Cafe Part-Time.wav-4d2084f374d8ffecc370fe68d1ae988e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

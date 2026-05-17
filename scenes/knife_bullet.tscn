@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://5mpvrucvk345"]
+
+[ext_resource type="Script" uid="uid://bsdrxvd3dtn1m" path="res://scripts/enemy/knife_bullet.gd" id="1_2fp52"]
+[ext_resource type="Texture2D" uid="uid://b2is4k3q7aay4" path="res://assets/sprites/knife_sprites/Knife1.png" id="2_aa05d"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lr614"]
+radius = 3.0
+height = 14.0
+
+[node name="KnifeBullet" type="Area2D" unique_id=816935045]
+script = ExtResource("1_2fp52")
+speed = 200
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1302639450]
+z_index = 5
+rotation = -1.5707964
+texture = ExtResource("2_aa05d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=124495453]
+position = Vector2(5, 1)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_lr614")
+
+[node name="BulletSound" type="AudioStreamPlayer2D" parent="." unique_id=1331881231]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://wk5tyfoucput"]
+
+[ext_resource type="Texture2D" uid="uid://64ybock02e0g" path="res://assets/icon.svg" id="1_cbee3"]
+[ext_resource type="Script" uid="uid://vqjua10bvq4x" path="res://scripts/aric_test.gd" id="1_dnfd7"]
+[ext_resource type="PackedScene" uid="uid://d4ec3vnmhnjud" path="res://scenes/chez_pc_placeholder.tscn" id="2_iqyrr"]
+[ext_resource type="PackedScene" uid="uid://borhi0o2v58a3" path="res://scenes/kill_zone.tscn" id="4_i380p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqyrr"]
+size = Vector2(320, 32)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i380p"]
+bg_color = Color(0.30904898, 0.27608284, 0.2757008, 1)
+
+[node name="Aric_Test" type="Node2D" unique_id=840410727]
+script = ExtResource("1_dnfd7")
+scrollspeed = 20.0
+
+[node name="StaticBody2D_Floor" type="StaticBody2D" parent="." unique_id=1242948465]
+position = Vector2(160, 164)
+scale = Vector2(0.9999974, 1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D_Floor" unique_id=516734031]
+shape = SubResource("RectangleShape2D_iqyrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D_Floor" unique_id=424492290]
+modulate = Color(0.7636295, 0.40097457, 0.17837647, 1)
+position = Vector2(-3.8146973e-06, -5.722046e-06)
+scale = Vector2(2.5, 0.24999991)
+texture = ExtResource("1_cbee3")
+
+[node name="StaticBody2D_Floor2" type="StaticBody2D" parent="." unique_id=161682811]
+position = Vector2(480, 164)
+scale = Vector2(0.9999974, 1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D_Floor2" unique_id=1250575518]
+shape = SubResource("RectangleShape2D_iqyrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D_Floor2" unique_id=1562176116]
+modulate = Color(0.7636295, 0.40097457, 0.17837647, 1)
+position = Vector2(-3.8146973e-06, -5.722046e-06)
+scale = Vector2(2.5, 0.24999991)
+texture = ExtResource("1_cbee3")
+
+[node name="StaticBody2D_Floor3" type="StaticBody2D" parent="." unique_id=1636092263]
+position = Vector2(800, 164)
+scale = Vector2(0.9999974, 1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D_Floor3" unique_id=713738253]
+shape = SubResource("RectangleShape2D_iqyrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D_Floor3" unique_id=814960095]
+modulate = Color(0.7636295, 0.40097457, 0.17837647, 1)
+position = Vector2(-3.8146973e-06, -5.722046e-06)
+scale = Vector2(2.5, 0.24999991)
+texture = ExtResource("1_cbee3")
+
+[node name="StaticBody2D_Floor4" type="StaticBody2D" parent="." unique_id=1910710837]
+position = Vector2(1120, 164)
+scale = Vector2(0.9999974, 1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D_Floor4" unique_id=964343240]
+shape = SubResource("RectangleShape2D_iqyrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D_Floor4" unique_id=1071431433]
+modulate = Color(0.7636295, 0.40097457, 0.17837647, 1)
+position = Vector2(-3.8146973e-06, -5.722046e-06)
+scale = Vector2(2.5, 0.24999991)
+texture = ExtResource("1_cbee3")
+
+[node name="StaticBody2D_Floor5" type="StaticBody2D" parent="." unique_id=1116917889]
+position = Vector2(1440, 164)
+scale = Vector2(0.9999974, 1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D_Floor5" unique_id=1793161089]
+shape = SubResource("RectangleShape2D_iqyrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D_Floor5" unique_id=2143826639]
+modulate = Color(0.7636295, 0.40097457, 0.17837647, 1)
+position = Vector2(-3.8146973e-06, -5.722046e-06)
+scale = Vector2(2.5, 0.24999991)
+texture = ExtResource("1_cbee3")
+
+[node name="Chez_PC_Placeholder" parent="." unique_id=285485107 instance=ExtResource("2_iqyrr")]
+position = Vector2(86, 147)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1463887994]
+anchor_mode = 0
+zoom = Vector2(4, 4)
+
+[node name="Area2D_KillZone" parent="Camera2D" unique_id=212058626 instance=ExtResource("4_i380p")]
+
+[node name="CanvasLayerHUD" type="CanvasLayer" parent="." unique_id=970745591]
+
+[node name="Panel" type="PanelContainer" parent="CanvasLayerHUD" unique_id=843567030]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -146.0
+offset_bottom = 100.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i380p")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayerHUD/Panel" unique_id=1017749277]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayerHUD/Panel/MarginContainer" unique_id=1473640976]
+layout_mode = 2
+
+[node name="LabelCameraSpeed" type="Label" parent="CanvasLayerHUD/Panel/MarginContainer/VBoxContainer" unique_id=963171660]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 16
+text = "Camera Speed: 0"
+
+[node name="LabelCameraPosition" type="Label" parent="CanvasLayerHUD/Panel/MarginContainer/VBoxContainer" unique_id=1673875203]
+unique_name_in_owner = true
+layout_mode = 2

@@ -13,4 +13,3 @@ func _process(_delta: float) -> void:
 	if chez_killed == true:
 		SceneLoader.load_scene("res://scenes/game_over.tscn")
 		chez_killed = false
-		goal_camera_has_panned = true

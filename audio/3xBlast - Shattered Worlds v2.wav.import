@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dn46gt4sfxqju"
+path="res://.godot/imported/3xBlast - Shattered Worlds v2.wav-bc1dfdacd8349888b4c9d1701090e7e2.sample"
+
+[deps]
+
+source_file="res://audio/3xBlast - Shattered Worlds v2.wav"
+dest_files=["res://.godot/imported/3xBlast - Shattered Worlds v2.wav-bc1dfdacd8349888b4c9d1701090e7e2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

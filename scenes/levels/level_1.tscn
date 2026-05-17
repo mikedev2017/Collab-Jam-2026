@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://wk5tyfoucput"]
 
-[ext_resource type="Script" uid="uid://vqjua10bvq4x" path="res://scripts/aric_test.gd" id="1_v6ha0"]
+[ext_resource type="Script" uid="uid://vqjua10bvq4x" path="res://scripts/level_1.gd" id="1_v6ha0"]
 [ext_resource type="PackedScene" uid="uid://bxio0q3n822mb" path="res://scenes/chef.tscn" id="2_gmpev"]
 [ext_resource type="Script" uid="uid://b1wdr8w8qvjfy" path="res://scripts/chef_scripts/chef.gd" id="3_mkypq"]
 [ext_resource type="PackedScene" uid="uid://borhi0o2v58a3" path="res://scenes/kill_zone.tscn" id="4_ndtll"]

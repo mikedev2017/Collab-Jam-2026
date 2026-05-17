@@ -12,11 +12,13 @@ var acceleration_marker : float = 200.00
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# Use await get_tree to prevent the AudioStreamPlayer from glitching on start.
+	await get_tree().create_timer(0.1).timeout 
 	%AudioStreamPlayer.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	#camera_2d.position.x = camera_2d.position.x + scrollspeed * delta
 	#camera_2d.position.y = (player.position.y + -147) + scrollspeed * delta
 	label_camera_speed.text = str("Camera speed: " + str(scrollspeed))
